@@ -7,4 +7,4 @@
 !.github/**
 !index.html
 !media/
-!media/hero.mp4
+!media/*.mp4
