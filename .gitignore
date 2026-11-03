@@ -8,3 +8,6 @@
 !index.html
 !media/
 !media/*.mp4
+# Build-out preview (2026-11-03): the generated site, served as built.
+!_site/
+!_site/**
