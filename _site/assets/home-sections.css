@@ -4,7 +4,7 @@
 .about-collage figure{border-radius:var(--r);overflow:hidden;background:var(--paper-2);margin:0}
 .about-collage img{width:100%;height:100%;object-fit:cover;display:block}
 .ac-main{aspect-ratio:4/3;box-shadow:0 24px 60px -34px rgba(var(--ink-rgb),.45)}
-.ac-inset{position:absolute;right:-18px;bottom:0;width:30%;aspect-ratio:3/4;border:6px solid #fff;box-shadow:0 18px 44px -22px rgba(var(--ink-rgb),.5)}
+.ac-inset{position:absolute;right:-18px;bottom:0;width:44%;aspect-ratio:4/3;border:6px solid #fff;box-shadow:0 18px 44px -22px rgba(var(--ink-rgb),.5)}
 .about-quote{margin:6px 0 24px;padding:4px 0 4px 18px;border-left:3px solid var(--brand);font-size:1.06rem;line-height:1.65;color:var(--ink);font-style:italic}
 .about-onsite{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:56px;align-items:start}
 .about-onsite figure{border-radius:var(--r);overflow:hidden;background:var(--paper-2);margin:0}
@@ -15,7 +15,7 @@
 .av-logos{display:flex;gap:14px;align-items:center}
 .av-logos img{width:64px;height:64px;object-fit:contain;display:block}
 @media(max-width:960px){.about-collage{max-width:520px;margin:0 auto;width:100%}}
-@media(max-width:600px){.ac-inset{right:-6px;width:30%}.about-onsite{grid-template-columns:1fr}}
+@media(max-width:600px){.ac-inset{right:-6px;width:46%}.about-onsite{grid-template-columns:1fr}}
 .about-stats{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .about-stats .h-sec,.about-diff .h-sec{color:var(--ink)}
 .about-stats .eyebrow,.about-diff .eyebrow{color:var(--muted)}
