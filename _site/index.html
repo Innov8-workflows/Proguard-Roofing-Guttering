@@ -229,7 +229,7 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .hero-award{margin-bottom:22px}
 .hero-title{margin:0 auto;line-height:0}
 .hero-logo{display:block;margin:0 auto;width:min(var(--hero-logo-w,620px),86vw);aspect-ratio:var(--hero-logo-ratio,3/1);background:center/contain no-repeat;filter:drop-shadow(0 6px 22px rgba(0,0,0,.55))}
-.hero-tag{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#fff;font-size:clamp(1.15rem,2.6vw,1.6rem);margin-top:22px;line-height:1.2}
+.hero-tag{display:block;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#fff;font-size:clamp(1.15rem,2.6vw,1.6rem);margin-top:22px;line-height:1.2}
 .hero-tag em{font-style:normal;color:var(--brand-lt)}
 .hero p.sub{color:var(--on-ink-2);font-size:clamp(1.02rem,2.2vw,1.18rem);margin:14px auto 32px;max-width:54ch}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
@@ -529,7 +529,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   .map-base::after{animation:mapPulse 2.4s ease-out infinite!important}
 }
 </style>
-<style>.nav-links a{white-space:nowrap}@media(max-width:1120px){.nav-links{display:none}.burger{display:block}}.mobile-menu{overflow-y:auto;overscroll-behavior:contain}.area-right{isolation:isolate}a.chip{text-decoration:none}@media(max-width:340px){.nav-inner{gap:8px}.nav-cta{gap:6px}}</style>
+<style>.nav-links a{white-space:nowrap}@media(max-width:1120px){.nav-links{display:none}.burger{display:block}}.mobile-menu{overflow-y:auto;overscroll-behavior:contain}.area-right{isolation:isolate}a.chip{text-decoration:none}@media(max-width:340px){.nav-inner{gap:8px}.nav-cta{gap:6px}}.nav-drop{position:relative;display:flex;align-items:center;height:100%}.nav-drop>a{display:inline-flex;align-items:center;gap:5px}.nav-drop>a svg{width:14px;height:14px;transition:transform .2s}.nav-sub{position:absolute;top:calc(100% + 12px);left:-16px;min-width:200px;display:flex;flex-direction:column;gap:2px;padding:8px;background:var(--ink-2);border:1px solid rgba(255,255,255,.12);border-radius:12px;box-shadow:0 24px 50px -20px rgba(0,0,0,.7);opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s ease .25s,transform .18s ease .25s,visibility 0s linear .43s;z-index:70}.nav-sub::before{content:"";position:absolute;left:0;right:0;top:-11px;height:11px}.nav-links .nav-sub a{padding:11px 14px;border-radius:8px}.nav-links .nav-sub a:hover{background:rgba(255,255,255,.07);color:#fff}.nav-drop:hover .nav-sub,.nav-drop:focus-within .nav-sub{opacity:1;visibility:visible;transform:none;transition-delay:0s}.nav-drop:hover>a svg,.nav-drop:focus-within>a svg{transform:rotate(180deg)}@media(prefers-reduced-motion:reduce) and (min-width:1121px){.nav-sub{transform:none!important;transition:opacity 0s linear .25s,visibility 0s linear .25s!important}.nav-drop:hover .nav-sub,.nav-drop:focus-within .nav-sub{transition-delay:0s!important}}.mobile-menu a.mm-sub{font-size:1rem;color:var(--on-ink-2);padding:10px 0 12px 18px;text-transform:none;letter-spacing:.02em}</style>
 <link rel="canonical" href="https://innov8-workflows.github.io/Proguard-Roofing-Guttering/">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
@@ -556,7 +556,13 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
       <a href="roofing/">Services</a>
       <a href="gallery/">Our Work</a>
       <a href="reviews/">Reviews</a>
-      <a href="about/">About</a>
+      <div class="nav-drop">
+        <a href="about/">About <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="nav-sub">
+          <a href="about/">About Us</a>
+          <a href="accreditations/">Accreditations</a>
+        </div>
+      </div>
       <a href="areas-we-cover/">Areas We Cover</a>
       <a href="faqs/">FAQs</a>
       <a href="contact/">Contact</a>
@@ -577,6 +583,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   <a href="gallery/">Our Work</a>
   <a href="reviews/">Reviews</a>
   <a href="about/">About</a>
+  <a class="mm-sub" href="accreditations/">Accreditations</a>
   <a href="areas-we-cover/">Areas We Cover</a>
   <a href="faqs/">FAQs</a>
   <a href="contact/">Contact</a>
@@ -592,8 +599,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   <div class="hero-content">
     <div class="wrap">
 
-      <h1 class="hero-title"><span class="hero-logo" style="background-image:var(--a-logo-webp);--hero-logo-ratio:1830/576" role="img" aria-label="Proguard Roofing and Guttering, roofing and guttering in Sussex"></span></h1>
-      <p class="hero-tag"><em>Roofing</em>, flat roofs and <em>guttering</em> across Sussex</p>
+      <h1 class="hero-title"><span class="hero-logo" style="background-image:var(--a-logo-webp);--hero-logo-ratio:1830/576" role="img" aria-label="Proguard Roofing and Guttering"></span><span class="hero-tag"><em>Roofing</em>, flat roofs and <em>guttering</em> across Sussex</span></h1>
       <p class="sub">Repairs, new roofs, chimneys, fascias and gutters for homes in Crawley, Horsham, East Grinstead, Haywards Heath, Burgess Hill and Crowborough. Free, no-obligation quotes and the property left clean and tidy.</p>
       <div class="hero-actions">
         <a class="btn btn-brand" href="#contact">
@@ -623,9 +629,9 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
       <div><div class="t-main">Sussex Based</div><div class="t-sub">Local and reliable</div></div>
     </div>
-    <a class="trust-item" href="https://www.trustatrader.com/traders/proguard-roofing-and-guttering-roofers-roofing-brighton-north" target="_blank" rel="noopener" style="text-decoration:none" aria-label="Rated 4.96 out of 5 from 53 reviews on TrustATrader">
+    <a class="trust-item" href="https://www.trustatrader.com/traders/proguard-roofing-and-guttering-roofers-roofing-brighton-north" target="_blank" rel="noopener" style="text-decoration:none" aria-label="Rated 4.96 out of 5 from 54 reviews on TrustATrader">
       <img src="/Proguard-Roofing-Guttering/assets/home/badge-trustatrader.webp" alt="" width="40" height="40" style="width:40px;height:40px;flex:none;border-radius:50%;background:#fff;padding:3px;object-fit:contain">
-      <div><div class="t-main">Rated 4.96/5 on TrustATrader</div><div class="t-sub">From 53 reviews</div></div>
+      <div><div class="t-main">Rated 4.96/5 on TrustATrader</div><div class="t-sub">From 54 reviews</div></div>
     </a>
   </div>
 </section>
@@ -821,9 +827,9 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
   <div class="wrap center">
     <span class="eyebrow">Reviews</span>
     <h2 class="h-sec">What Our Customers Say</h2>
-    <p class="lead">Rated 4.96 out of 5 from 53 reviews on TrustATrader. Here's what customers say, word for word.</p>
+    <p class="lead">Rated 4.96 out of 5 from 54 reviews on TrustATrader. Here's what customers say, word for word.</p>
     <div class="rev-score">
-      <a class="rev-sc" href="https://www.trustatrader.com/traders/proguard-roofing-and-guttering-roofers-roofing-brighton-north" target="_blank" rel="noopener"><span class="rev-logo"><img src="img/badge-trustatrader.webp" alt="" width="34" height="34"></span><div><b>4.96<small>/5</small></b><span class="lbl">53 reviews on TrustATrader</span></div></a>
+      <a class="rev-sc" href="https://www.trustatrader.com/traders/proguard-roofing-and-guttering-roofers-roofing-brighton-north" target="_blank" rel="noopener"><span class="rev-logo"><img src="img/badge-trustatrader.webp" alt="" width="34" height="34"></span><div><b>4.96<small>/5</small></b><span class="lbl">54 reviews on TrustATrader</span></div></a>
     </div>
   </div>
   <div class="wrap">
@@ -902,7 +908,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
       <a class="acc-card" href="https://www.trustatrader.com/traders/proguard-roofing-and-guttering-roofers-roofing-brighton-north" target="_blank" rel="noopener">
         <img class="acc-badge" loading="lazy" src="/Proguard-Roofing-Guttering/assets/home/badge-trustatrader.webp" alt="TrustATrader logo" width="112" height="112">
         <h3>TrustATrader</h3>
-        <div class="acc-stat">4.96/5 from 53 reviews</div>
+        <div class="acc-stat">4.96/5 from 54 reviews</div>
         <p>Vetted and approved by TrustATrader, membership number TT23534.</p>
         <span class="acc-link">View our profile <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span>
       </a>
@@ -1132,6 +1138,7 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
           <li><a href="gallery/">Our Work</a></li>
           <li><a href="reviews/">Reviews</a></li>
           <li><a href="about/">About Us</a></li>
+          <li><a href="accreditations/">Accreditations</a></li>
           <li><a href="areas-we-cover/">Areas We Cover</a></li>
           <li><a href="faqs/">FAQs</a></li>
           <li><a href="contact/">Get a Quote</a></li>
